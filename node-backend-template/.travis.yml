@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+- 12
+script:
+- yarn
+deploy:
+  provider: heroku
+  api_key:
+    secure: 8YTQf+8UvKoXKfKrUtpoB8jkDHzlFm1emwCPc/b7NrdFt4S8bquzG1vs6QmomFE/k2Os/kOWqdg+feb9KgrarQK4fOdTVQAvXwFi1cAax1SWoL9KdpSl6MfjSt6vIzyKdht2j02gp1wuYiZy2npicIcjqJK07tgsbb+a4Yud1Hl4Lo6rgZWMm5l6ipV+cxu2eKPvhSWcUa3oVWPqOjmXQfkj9z8cxgOm7BnFTQP1/TchEElIwBtuTfRi+pCpJoUYmx788i28MXe32HZH/tw3n0MfQzYIPHR21tZ5uAl8LEM01Fs7oxti07vHIAvQNe3fnuF4qMFuFsXBrypERoUSrvYOSAmFfu1L2UrLjosnwSiqKzIU5/N6NhlUflptf0equlpkV2AXrXTd9NcF9FOo4394sZgp7Ad/KD8n8CqeXaf0HmGdh3oTOo7F9NhR+oqUo8OWoHpwwrP7EvRhGahKg7oCZDAlTdsfLqnuNQFr21UculIz51tH0g0Dfl7ViuEemUOFhYj/7V38wrbmuT1kG0hsnTHWuFzoadkaopSNexPamKPHP7USaHv6iDp7qhdIdMpRajLpmgiimpKrni6Le/fZKwt4CHCqUfVo2LSUsR4rTyKhCfAAtHQtU7+B+4xpUFMTDI1/alGsae1QEdFvNgioHfgXP+hgyxx5XuFEa8A=
+  app: frontlett-backend
+  on:
+    repo: ASIN5/frontlett-backend
+    branch: development
+  branches:
+    only:
+    - development
+  skip_cleanup: true
